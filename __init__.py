@@ -1,35 +1,68 @@
-import unittest
+def are_numbers_equal(number1, number2, allowed_difference=10**1):
+    return abs(number1 - number2) < allowed_difference
 
 
-def are_numbers_equal(number1, number2, allowed_difference=1):
-    if allowed_difference == 1000000:
-        places = 1
+def are_numbers_equal_diff_0_1(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-0)
 
-    elif allowed_difference == 100000:
-        places = 2
 
-    elif allowed_difference == 10000:
-        places = 3
+def are_numbers_equal_diff_0_01(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-1)
 
-    elif allowed_difference == 1000:
-        places = 4
-    elif allowed_difference == 100:
-        places = 5
-    elif allowed_difference == 10:
-        places = 6
-    else:
-        places = 7
-    testcase = unittest.FunctionTestCase(print)
-    number1 /= 20000000
-    number2 /= 20000000
-    try:
-        x = testcase.assertAlmostEqual(number1, number2, places=places)
-        if x == None:
-            ergebnis = True
-            return ergebnis
-    except Exception:
-        ergebnis = False
-        return ergebnis
 
+def are_numbers_equal_diff_0_001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-2)
+
+
+def are_numbers_equal_diff_0_0001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-3)
+
+
+def are_numbers_equal_diff_0_00001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-4)
+
+
+def are_numbers_equal_diff_0_000001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-5)
+
+
+def are_numbers_equal_diff_0_0000001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-6)
+
+
+def are_numbers_equal_diff_0_00000001(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**-7)
+
+
+def are_numbers_equal_diff_10(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**1)
+
+
+def are_numbers_equal_diff_100(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**2)
+
+
+def are_numbers_equal_diff_1000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**3)
+
+
+def are_numbers_equal_diff_10000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**4)
+
+
+def are_numbers_equal_diff_100000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**5)
+
+
+def are_numbers_equal_diff_1000000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**6)
+
+
+def are_numbers_equal_diff_10000000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**7)
+
+
+def are_numbers_equal_diff_100000000(number1, number2):
+    return are_numbers_equal(number1, number2, allowed_difference=10**8)
 
 
