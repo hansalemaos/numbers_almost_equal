@@ -2,64 +2,58 @@
 
 ```python
 
-allowed_difference will be set to 1 if the number that you pass is not in [1000000,100000,10000,1000,100,10]
-That means 1 is the minimum difference you can check for. I wrote this function especially to compare ints.
-It works with floats too, but you can't go below 1 without changing the source code 
+from numbers_almost_equal import (
+are_numbers_equal,
+are_numbers_equal_diff_0_00000001,
+are_numbers_equal_diff_0_0000001,
+are_numbers_equal_diff_0_000001,
+are_numbers_equal_diff_0_00001,
+are_numbers_equal_diff_0_0001,
+are_numbers_equal_diff_0_001,
+are_numbers_equal_diff_0_01,
+are_numbers_equal_diff_0_1,
+are_numbers_equal_diff_10,
+are_numbers_equal_diff_100,
+are_numbers_equal_diff_1000,
+are_numbers_equal_diff_10000,
+are_numbers_equal_diff_100000,
+are_numbers_equal_diff_1000000,
+are_numbers_equal_diff_10000000,
+are_numbers_equal_diff_100000000,)
 
-$pip install numbers-almost-equal
-from numbers_almost_equal import are_numbers_equal
+are_numbers_equal_diff_0_1(number1=0.1, number2=0.2)=True
+are_numbers_equal_diff_0_1(number1=0.1, number2=2)=False
+are_numbers_equal_diff_0_01(number1=0.01, number2=0.02)=True
+are_numbers_equal_diff_0_01(number1=0.01, number2=0.2)=False
+are_numbers_equal_diff_0_001(number1=0.001, number2=0.002)=True
+are_numbers_equal_diff_0_001(number1=0.001, number2=0.02)=False
+are_numbers_equal_diff_0_0001(number1=0.0001, number2=0.0002)=True
+are_numbers_equal_diff_0_0001(number1=0.0001, number2=0.002)=False
+are_numbers_equal_diff_0_00001(number1=0.00001, number2=0.00002)=True
+are_numbers_equal_diff_0_00001(number1=0.00001, number2=0.0002)=False
+are_numbers_equal_diff_0_000001(number1=0.000001, number2=0.000002)=True
+are_numbers_equal_diff_0_000001(number1=0.000001, number2=0.00002)=False
+are_numbers_equal_diff_0_0000001(number1=0.0000001, number2=0.0000002)=True
+are_numbers_equal_diff_0_0000001(number1=0.0000001, number2=0.000002)=False
+are_numbers_equal_diff_0_00000001(number1=0.00000001, number2=0.00000002)=True
+are_numbers_equal_diff_0_00000001(number1=0.00000001, number2=0.0000002)=False
+are_numbers_equal_diff_10(number1=10, number2=11)=True
+are_numbers_equal_diff_10(number1=10, number2=20)=False
+are_numbers_equal_diff_100(number1=100, number2=110)=True
+are_numbers_equal_diff_100(number1=100, number2=200)=False
+are_numbers_equal_diff_1000(number1=1000, number2=1100)=True
+are_numbers_equal_diff_1000(number1=1000, number2=2000)=False
+are_numbers_equal_diff_10000(number1=10000, number2=11000)=True
+are_numbers_equal_diff_10000(number1=10000, number2=20000)=False
+are_numbers_equal_diff_100000(number1=100000, number2=110000)=True
+are_numbers_equal_diff_100000(number1=100000, number2=200000)=False
+are_numbers_equal_diff_1000000(number1=1000000, number2=1100000)=True
+are_numbers_equal_diff_1000000(number1=1000000, number2=2000000)=False
+are_numbers_equal_diff_10000000(number1=10000000, number2=11000000)=True
+are_numbers_equal_diff_10000000(number1=10000000, number2=20000000)=False
+are_numbers_equal_diff_100000000(number1=100000000, number2=110000000)=True
+are_numbers_equal_diff_100000000(number1=100000000, number2=200000000)=False
 
-(are_numbers_equal(number1=70, number2=71, allowed_difference=1))
-Out[4]: True
-(are_numbers_equal(number1=70, number2=72, allowed_difference=1))
-Out[5]: False
-(are_numbers_equal(number1=60, number2=59, allowed_difference=1))
-Out[6]: True
-(are_numbers_equal(number1=60, number2=58, allowed_difference=1))
-Out[7]: False
-(are_numbers_equal(number1=60, number2=58, allowed_difference=10))
-Out[8]: True
-(are_numbers_equal(number1=60, number2=71, allowed_difference=10))
-Out[10]: False
-(are_numbers_equal(number1=60, number2=70, allowed_difference=10))
-Out[11]: True
-(are_numbers_equal(number1=60, number2=70, allowed_difference=100))
-Out[12]: True
-
-(are_numbers_equal(number1=60, number2=159, allowed_difference=100))
-Out[13]: True
-
-(are_numbers_equal(number1=60, number2=161, allowed_difference=100))
-Out[15]: False
-
-(are_numbers_equal(number1=60, number2=161, allowed_difference=1000))
-Out[16]: True
-
-(are_numbers_equal(number1=60, number2=1059, allowed_difference=1000))
-Out[17]: True
-
-(are_numbers_equal(number1=60, number2=1061, allowed_difference=1000))
-Out[18]: False
-
-(are_numbers_equal(number1=60, number2=1061, allowed_difference=10000))
-Out[19]: True
-
-(are_numbers_equal(number1=60, number2=10059, allowed_difference=10000))
-Out[20]: True
-(are_numbers_equal(number1=60, number2=10061, allowed_difference=10000))
-Out[22]: False
-
-(are_numbers_equal(number1=60, number2=10061, allowed_difference=100000))
-Out[24]: True
-
-(are_numbers_equal(number1=60, number2=100059, allowed_difference=100000))
-Out[26]: True
-(are_numbers_equal(number1=60, number2=100061, allowed_difference=100000))
-Out[27]: False
-(are_numbers_equal(number1=60, number2=1000061, allowed_difference=1000000))
-Out[29]: False
-(are_numbers_equal(number1=60, number2=1000059, allowed_difference=1000000))
-Out[30]: True
 
 
 ```
